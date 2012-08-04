@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect1.html">第一节</a></h3>
+                        <ul>
+                            <li><span class="sn">ride</span><a href="/chapt1/ride.html">你的飞碟在这儿！</a></li>
+                            <li><span class="sn">gift1</span><a href="/chapt1/gift1.html">贪婪的送礼者</a></li>
+                            <li><span class="sn">friday</span><a href="/chapt1/friday.html">黑色星期五</a></li>
+                            <li><span class="sn">beads</span><a href="/chapt1/beads.html">坏掉的项链</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>贪婪的送礼者</h1>
+    <h2>题目描述</h2>
+    <p>对于一群要互送礼物的朋友，你要确定每个人送出的钱比收到的多多少。 </p>
+    <p>在这一个问题中，每个人都准备了一些钱来送礼物，而这些钱将会被平均分给那些将收到他的礼物的人。 然而，在任何一群朋友中，有些人将送出较多的礼物(可能是因为有较多的朋友)，有些人有准备了较多的钱。</p>
+    <p>给出一群朋友， 没有人的名字会长于 14 字符，给出每个人将花在送礼上的钱，和将收到他的礼物的人的列表， 请确定每个人收到的比送出的钱多的数目。</p>
+    <h2>输入格式 <small>gift1.in</small></h2>
+    <p>第 1 行: 人数NP,2&lt;= NP&lt;=10 </p>
+    <p>第 2 到 J+1 行: 这NP个在组里人的名字，一个名字一行。</p>
+    <p>第 J+2 行到最后：</p>
+    <p>这里的 I 段内容是这样组织的：</p>
+    <p>第一行是将会送出礼物人的名字。</p>
+    <p>第二行包含二个数字:　第一个是原有的钱的数目（在 0 到 2000 的范围里），第二个 NG<sub>i</sub> 是将收到这个人礼物的人的个数。如果 NG<sub>i</sub> 是非零的, 在下面 NG<sub>i</sub> 行列出礼物的接受者的名字，一个名字一行。</p>
+    <h2>输出格式 <small>gift1.out</small></h2>
+    <p>每行是一个的名字加上空格再加上收到的比送出的钱多的数目。</p>
+    <p>对于每一个人，他名字的打印顺序应和他在输入的 2 到 NP+1 行中输入的顺序相同。所有的送礼的钱都是整数。</p>
+    <p>每个人把相同数目的钱给每位要送礼的朋友，而且尽可能多给，不能给出的钱送礼者自己保留(算进送礼者本人收入部分)。</p>
+    <h2>输入样例</h2>
+    <pre>5
+dave
+laura
+owen
+vick
+amr
+dave
+200 3
+laura
+owen
+vick
+owen
+500 1
+dave
+amr
+150 2
+vick
+owen
+laura
+0 2
+amr
+vick
+vick
+0 0</pre>
+    <h2>输出样例</h2>
+    <pre>dave 302
+laura 66
+owen -359
+vick 141
+amr -150</pre>
+</div>
+</body>
+</html>
