@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect2.html">第二节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/comp.html">枚举搜索</a></li>
+                            <li><span class="sn">milk2</span><a href="/chapt1/milk2.html">挤牛奶</a></li>
+                            <li><span class="sn">transform</span><a href="/chapt1/transform.html">方块转换</a></li>
+                            <li><span class="sn">namenum</span><a href="/chapt1/namenum.html">命名那个数字</a></li>
+                            <li><span class="sn">palsquare</span><a href="/chapt1/palsquare.html">回文平方数</a></li>
+                            <li><span class="sn">dualpal</span><a href="/chapt1/palsquare.html">双重回文数</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>枚举搜索</h1>
+    <small><b>译者：</b>Yahoo! Babel Fish, Nocow Aule</small>
+    <h2>思想</h2>
+    <p>写枚举搜索时应遵循 KISS 原则（Keep it simple stupid，译为“写最单纯愚蠢的程序”，意思是应把程序写得尽量简洁），竞赛时写程序的最终目标就是在限制时间内求出解，而不需太在意否还有更快的算法。</p>
+    <p>枚举搜索具有强大的力量，他用直接面向答案并尝试所有方案的方法发现答案。这种算法几乎总是解题时你第一个想到的方法。如果它能在规定的时间与空间限制内找出解，那么它常常很容易编写与调试。这就意味着你可以有时间去解答其他难题，即那些不能显示枚举算法强大的题目。</p>
+    <p>如果你面对一道可能状态小于两百万的题目，那么你可以考虑使用枚举搜索。尝试所有的状态，看看它们是否可行。</p>
+    <h2>小心！小心！</h2>
+    <p>有时，题目不会直接要求你使用枚举算法。</p>
+    <h2>问题：派对灯光 [IOI 98]</h2>
+    <p>在一次 IOI 派对上有 N 个灯和 4 个灯开关，第一个开关可以使所有灯改变状态（关上开着的灯，开启关着的灯），第二个开关可以改变所有偶数位上灯的状态，第三个开关可以改变所有奇数位上灯的状态，第四个开关控制着灯1、4、7、10……（3n+1）。</p>
+    <p>告诉你 N 的值和所有按开关的次数（小于 10,000 次）。并告诉你某些灯的状态（例如：7 号灯是关着的，10 号灯是开着的）请编程输出所有灯可能的最后状态。</p>
+    <p>很明显，每次按开关你都要尝试 4 种可能。那么总共要试 4<sup>10000</sup> 次（大约 10<sup>6020</sup>），那意味着你没有足够的时间去使用枚举搜索，但是我们将枚举方法改进一下，那就可以使用枚举了。因为无论有多少个灯，由于开关控制的特殊性，都会出现 6 个灯一次循环的情况，即 1 号灯的状态永远与 7 号灯，13 号灯，19 号灯……相同，2 号灯的状态也永远与 8 号灯，14 号灯，20 号灯……相同。同样，无论你按了多少次开关，按同一个开关两次就相当于没有按该开关，那么每一个开关就只需要考虑按一次或没有按，那么这题的枚举量就很小了。</p>
+    <h2>问题三：时钟 [IOI 94]</h2>
+    <p>一组九个时钟在 3x3 栅格中; 其中每一个被设置到 12:00、3:00、6:00 或者 9:00 。 您的目标是操作他们全部读 12:00 。 不幸地，您能操作时钟的唯一的方式是九种不同类型的转动之一，每一个转动使时钟的某一子集顺时针方向 90 度。</p>
+    <p>找到把所有时钟拨到 12:00 的转动的最短序列。</p>
+    <p>要做的“明显的”事是一种递归解答，检查看是否有转动 1 的解答，转动 2 等等，直到它发现一种解答。这将花费 9k 时间， k 是移动的数量。因为 k 也许相当大，这不能在合理时间限制内运行完成。</p>
+    <p>注意移动的顺序不重要。 这使时间降低下来到k<sup>9</sup>，不足以改善。</p>
+    <p>然而，从做每个转动 4 次是和不做是一样的，您知道每个转动总的不会超过 3 次。 因此，只有 49 种可能性，也就是 262,072 ；根据经验，在一秒钟内，运算次数可以超过 10,000,000 次（也就是一千万次）。 暴力求解，从这个角度看，理由是很充分的。</p>
+    <h2>样例问题</h2>
+    <h3>奶牛 [USACO 1996年比赛]</h3>
+    <p>给出挤奶日程表(农夫 A 从 300 时间挤奶到 1000 时间，农夫 B 从 700 到 1200 时间等等)，计算：</p>
+    <ul>
+        <li>至少一头母牛被挤奶的最长时间</li>
+        <li>没有母牛被挤奶的最长时间</li>
+    </ul>
+    <h3>完全母牛&亲和母牛表兄弟 [USACO 1995 Final Round]</h3>
+    <p>完全数是真因子（即除了本身之外的约数）的和等于本身的数。 例如， 28 = 1 + 2 + 4 + 7 + 14。一对亲和数（又叫相亲数）是其中任一个数的所有真因数之和等于另一个数的一对数。当然，亲和数链（也叫相亲数链）就是第一个数的真因数之和等于第二个数，第二个数的真因数之和等于第三个……等等，直到最后一个数的真因数之和等于第一个数。</p>
+    <p>农夫约翰的大农场里的每头母牛按顺序从 1 到 32000 有一个编号。一头编号是完全数的母牛就是完全母牛。 如果他们的编号形成了一个亲和数链，这些母牛就互相是亲和母牛表兄弟。 找出所有完全母牛和亲和母牛表兄弟。</p>
+</div>
+</body>
+</html>
