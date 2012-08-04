@@ -20,10 +20,16 @@ a {
     color: #000; 
 }
 
+h1, h2, h3, h4, h5 {
+    margin: 5px 0; 
+}
+
 .sidebar {
     opacity: .1; 
     -webkit-transition-property: opacity; 
     -webkit-transition-duration: .5s;
+    -moz-transition-property: opacity; 
+    -moz-transition-duration: .5s;
     position: fixed; 
     width: 300px; 
     top: 30px; 
@@ -41,16 +47,6 @@ a {
     margin: 30px; 
 }
 
-.chapt-list {
-    list-style-position: inside; 
-}
-
-.chapt-list > dt {
-    font-size: 17px; 
-    margin: 16px 0; 
-    list-style-type: square; 
-}
-
 .chapt-num {
     color: #AAA; 
 }
@@ -60,6 +56,18 @@ a {
     color: #AAA; 
     margin-left: 10px; 
     margin-right: 10px; 
+}
+
+.chapt-list h3, .chapt-list h4 {
+    font: 500 14px/1.8 inhreit; 
+}
+
+.chapt-list h2 {
+    font-size: 17px; 
+}
+
+.chapt-list ul {
+    margin-left: 20px; 
 }
 
 .content {
@@ -72,10 +80,6 @@ a {
     text-indent: 2em; 
 }
 
-.chapt-list dd {
-    margin-left: 20px; 
-}
-
 .content ul {
     list-style: square inside; 
     margin-left: 2em; 
@@ -83,4 +87,10 @@ a {
 
 .sect-list ul {
     list-style: square inside; 
+}
+
+.sn {
+    float: right; 
+    display: inline; 
+    color: #AAA; 
 }
