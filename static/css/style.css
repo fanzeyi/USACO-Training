@@ -71,3 +71,16 @@ a {
 .content p {
     text-indent: 2em; 
 }
+
+.chapt-list dd {
+    margin-left: 20px; 
+}
+
+.content ul {
+    list-style: square inside; 
+    margin-left: 2em; 
+}
+
+.sect-list ul {
+    list-style: square inside; 
+}
