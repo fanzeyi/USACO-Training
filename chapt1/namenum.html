@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect2.html">第二节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/comp.html">枚举搜索</a></li>
+                            <li><span class="sn">milk2</span><a href="/chapt1/milk2.html">挤牛奶</a></li>
+                            <li><span class="sn">transform</span><a href="/chapt1/transform.html">方块转换</a></li>
+                            <li><span class="sn">namenum</span><a href="/chapt1/namenum.html">命名那个数字</a></li>
+                            <li><span class="sn">palsquare</span><a href="/chapt1/palsquare.html">回文平方数</a></li>
+                            <li><span class="sn">dualpal</span><a href="/chapt1/palsquare.html">双重回文数</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>命名那个数字</h1>
+    <h2>题目描述</h2>
+    <p>在威斯康辛州牛大农场经营者之中，都习惯于请会计部门用连续数字给母牛打上烙印。但是,母牛本身并没感到这个系统的便利,它们更喜欢用它们喜欢的名字来呼叫它们的同伴，而不是用像这个的语句"C'mon, #4734, get along."。</p>
+    <p>请写一个程序来帮助可怜的牧牛工将一只母牛的烙印编号翻译成一个可能的名字。因为母牛们现在都有手机了，使用那标准的按键的排布来把将数目翻译为文字:( 除了 "Q" 和 "Z")</p>
+    <pre>
+          2: A,B,C     5: J,K,L    8: T,U,V
+          3: D,E,F     6: M,N,O    9: W,X,Y
+          4: G,H,I     7: P,R,S</pre>
+    <p>可接受的名字都被放在这样一个叫作"dict.txt" 的文件中，它包含一连串的少于 5,000个（准确地说是4617个）可被接受的牛的名字。 (所有的名字都是大写的且已按字典序排列) 请读入母牛的编号并返回那些能从编号翻译出来并且在字典中的名字。</p>
+    <p>举例来说,编号 4734 能产生的下列各项名字:</p>
+    <pre>GPDG GPDH GPDI GPEG GPEH GPEI GPFG GPFH GPFI GRDG GRDH GRDI
+GREG GREH GREI GRFG GRFH GRFI GSDG GSDH GSDI GSEG GSEH GSEI
+GSFG GSFH GSFI HPDG HPDH HPDI HPEG HPEH HPEI HPFG HPFH HPFI
+HRDG HRDH HRDI HREG HREH HREI HRFG HRFH HRFI HSDG HSDH HSDI
+HSEG HSEH HSEI HSFG HSFH HSFI IPDG IPDH IPDI IPEG IPEH IPEI
+IPFG IPFH IPFI IRDG IRDH IRDI IREG IREH IREI IRFG IRFH IRFI
+ISDG ISDH ISDI ISEG ISEH ISEI ISFG ISFH ISFI</pre>
+    <p>碰巧，81个中只有一个"GREG"是有效的(在字典中)。</p>
+    <p>写一个程序来对给出的编号打印出所有的有效名字，如果没有则输出NONE。编号可能有12位数字。</p>
+    <h2>输入格式 <small>namenum.in & dict.txt</small></h2>
+    <p>单独的一行包含一个编号(长度可能从1到12)。</p>
+    <p>dict.txt 文件可以在 <a href="http://ace.delos.com/usaco/namenumdict.txt">http://ace.delos.com/usaco/namenumdict.txt</a> 找到。</p>
+    <h2>输出格式 <small>namenum.out</small></h2>
+    <p>以字典顺序输出一个有效名字的不重复列表，一行一个名字。 <b>如果没有有效名字，输出'NONE'。</b></p>
+    <h2>输入样例</h2>
+    <pre>4734</pre>
+    <h2>输出样例</h2>
+    <pre>GREG</pre>
+</div>
+</body>
+</html>
