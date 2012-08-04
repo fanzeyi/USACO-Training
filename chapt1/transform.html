@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect2.html">第二节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/comp.html">枚举搜索</a></li>
+                            <li><span class="sn">milk2</span><a href="/chapt1/milk2.html">挤牛奶</a></li>
+                            <li><span class="sn">transform</span><a href="/chapt1/transform.html">方块转换</a></li>
+                            <li><span class="sn">namenum</span><a href="/chapt1/namenum.html">命名那个数字</a></li>
+                            <li><span class="sn">palsquare</span><a href="/chapt1/palsquare.html">回文平方数</a></li>
+                            <li><span class="sn">dualpal</span><a href="/chapt1/palsquare.html">双重回文数</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>方块转换</h1>
+    <h2>题目描述</h2>
+    <p>一块 N x N (1 &lt;= N &lt;= 10) 正方形的黑白瓦片的图案要被转换成新的正方形图案。写一个程序来找出将原始图案按照以下列转换方法转换成新图案的最小方式：</p>
+    <p>1: 转 90 度：图案按顺时针转 90 度。</p>
+    <p>2: 转 180 度：图案按顺时针转 180 度。</p>
+    <p>3: 转 270 度：图案按顺时针转 270 度。</p>
+    <p>4: 反射：图案在水平方向翻转（以中央铅垂线为中心形成原图案的镜像）。</p>
+    <p>5: 组合：图案在水平方向翻转，然后再按照1到3之间的一种再次转换。</p>
+    <p>6: 不改变：原图案不改变。</p>
+    <p>7: 无效转换：无法用以上方法得到新图案。</p>
+    <p>如果有多种可用的转换方法，请选择序号最小的那个。</p>
+    <p>只使用 1-7 中的一个步骤来完成这次转换。</p>
+    <h2>输入格式 <small>transform.in</small></h2>
+    <p>第一行： 单独的一个整数 N 。</p>
+    <p>第二行到第 N+1 行： N 行每行 N 个字符（不是 “@” 就是 “-” ）；这是转换前的正方形。</p>
+    <p>第 N+2 行到第 2*N+1 行： N 行每行 N 个字符（不是 “@” 就是 “-” ）；这是转换后的正方形。</p>
+    <h2>输出格式 <small>transform.out</small></h2>
+    <p>单独的一行包括 1 到 7 之间的一个数字（在上文已描述）表明需要将转换前的正方形变为转换后的正方形的转换方法。</p>
+    <h2>输入样例</h2>
+    <pre>3
+@-@
+---
+@@-
+@-@
+@--
+--@</pre>
+    <h2>输出样例</h2>
+    <pre>1</pre>
+</div>
+</body>
+</html>
