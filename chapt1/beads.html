@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect1.html">第一节</a></h3>
+                        <ul>
+                            <li><span class="sn">ride</span><a href="/chapt1/ride.html">你的飞碟在这儿！</a></li>
+                            <li><span class="sn">gift1</span><a href="/chapt1/gift1.html">贪婪的送礼者</a></li>
+                            <li><span class="sn">friday</span><a href="/chapt1/friday.html">黑色星期五</a></li>
+                            <li><span class="sn">beads</span><a href="/chapt1/beads.html">坏掉的项链</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>坏掉的项链</h1>
+    <h2>题目描述</h2>
+    <p>你有一条由 N 个红色的，白色的，或蓝色的珠子组成的项链(3&lt;=N&lt;=350)，珠子是随意安排的。 这里是 n=29 的二个例子:
+    <pre>
+                1 2                               1 2
+            r b b r                           b r r b
+          r         b                       b         b
+         r           r                     b           r
+        r             r                   w             r
+       b               r                 w               w
+      b                 b               r                 r
+      b                 b               b                 b
+      b                 b               r                 b
+       r               r                 b               r
+        b             r                   r             r
+         b           r                     r           r
+           r       r                         r       b
+             r b r                             r r w
+            Figure A                         Figure B
+                        r red bead
+                        b blue bead
+                        w white bead
+</pre>
+    <p>第一和第二个珠子在图片中已经被作记号。</p>
+    <p>图片 A 中的项链可以用下面的字符串表示： brbrrrbbbrrrrrbrrbbrbbbbrrrrb</p>
+    <p>假如你要在一些点打破项链,展开成一条直线，然后从一端开始收集同颜色的珠子直到你遇到一个不同的颜色珠子，在另一端做同样的事(颜色可能与在这之前收集的不同)。 确定应该在哪里打破项链来收集到最大数目的珠子。</p>
+    <p>例如，在图片 A 中的项链中，在珠子 9 和珠子 10 或珠子 24 和珠子 25 之间打断项链可以收集到 8 个珠子。</p>
+    <p>在一些项链中还包括白色的珠子(如图片B) 所示。 当收集珠子的时候，一个被遇到的白色珠子可以被当做红色也可以被当做蓝色。表现含有白珠项链的字符串将会包括三个符号 r, b 和 w 。</p>
+    <p>写一个程序来确定从一条被给出的项链可以收集到的珠子最大数目。</p>
+    <h2>输入格式 <small>beads.in</small></h2>
+    <p>第 1 行: N, 珠子的数目</p>
+    <p>第 2 行: 一串长度为N的字符串, 每个字符是 r, b 或 w。</p>
+    <h2>输出格式 <small>beads.out</small></h2>
+    <p>单独的一行: 最大可能取得的珠子数</p>
+    <h2>输入样例</h2>
+    <pre>29
+wwwbbrwrbrbrrbrbrwrwwrbwrwrrb</pre>
+    <h2>输出样例</h2>
+    <pre>11</pre>
+</div>
+</body>
+</html>
+
