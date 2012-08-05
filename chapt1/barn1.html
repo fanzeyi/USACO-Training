@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect3.html">第三节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/greedy.html">贪心算法</a></li>
+                            <li><span class="sn">milk</span><a href="/chapt1/milk.html">混合牛奶</a></li>
+                            <li><span class="sn">barn1</span><a href="/chapt1/barn1.html">修理牛棚</a></li>
+                            <li><a href="/chapt1/craft.html">取胜策略</a></li>
+                            <li><span class="sn">calfflac</span><a href="/chapt1/calfflac.html">牛与电脑</a></li>
+                            <li><span class="sn">crypt1</span><a href="/chapt1/crypt1.html">牛式</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>修理牛棚</h1>
+    <h2>题目描述</h2>
+    <p>在一个夜黑风高,下着暴风雨的夜晚，Farmer John的牛棚的屋顶、门被吹飞了。 好在许多牛正在度假，所以牛棚没有住满。</p>
+    <p>牛棚一个紧挨着另一个被排成一行，牛就住在里面过夜。 有些牛棚里有牛，有些没有。 所有的牛棚有相同的宽度。</p>
+    <p>自门遗失以后，Farmer John必须尽快在牛棚之前竖立起新的木板。他的新木材供应商将会供应他任何他想要的长度，但是吝啬的供应商只能提供有限数目的木板。Farmer John想将他购买的木板总长度减到最少。</p>
+    <p>给出：可能买到的木板最大的数目 M ( 1 &lt;= M &lt;= 50 )，牛棚的总数 S ( 1 &lt;= S &lt;= 200 )，牛棚里牛的总数 C ( 1 &lt;= C &lt;= S )，和牛所在的牛棚的编号 stall_number ( 1 &lt;= stall_number &lt;= S )，计算拦住所有有牛的牛棚所需木板的最小总长度。 输出所需木板的最小总长度作为答案。</p>
+    <h2>输入格式 <small>barn1.in</small></h2>
+    <p>1 行: M ， S 和 C(用空格分开)</p>
+    <p>2 到 C + 1 行:  每行包含一个整数，表示牛所占的牛棚的编号。</p>
+    <h2>输出格式 <small>barn1.out</small></h2>
+    <p>单独的一行包含一个整数表示所需木板的最小总长度。</p>
+    <h2>输入样例</h2>
+    <pre>4 50 18
+3 
+4 
+6 
+8 
+14
+15 
+16 
+17 
+21
+25 
+26 
+27 
+30 
+31 
+40 
+41 
+42 
+43</pre>
+    <h2>输出样例</h2>
+    <pre>25</pre>
+</div>
+</body>
+</html>

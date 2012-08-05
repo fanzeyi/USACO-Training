@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect3.html">第三节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/greedy.html">贪心算法</a></li>
+                            <li><span class="sn">milk</span><a href="/chapt1/milk.html">混合牛奶</a></li>
+                            <li><span class="sn">barn1</span><a href="/chapt1/barn1.html">修理牛棚</a></li>
+                            <li><a href="/chapt1/craft.html">取胜策略</a></li>
+                            <li><span class="sn">calfflac</span><a href="/chapt1/calfflac.html">牛与电脑</a></li>
+                            <li><span class="sn">crypt1</span><a href="/chapt1/crypt1.html">牛式</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>混合牛奶</h1>
+    <h2>题目描述</h2>
+    <p>由于乳制品产业利润很低，所以降低原材料（牛奶）价格就变得十分重要。帮助梅丽乳业找到最优的牛奶采购方案。</p>
+    <p>梅丽乳业从一些奶农手中采购牛奶，并且每一位奶农为乳制品加工企业提供的价格是不同的。此外，就像每头奶牛每天只能挤出固定数量的奶，每位奶农每天能提供的牛奶数量是一定的。每天梅丽乳业可以从奶农手中采购到小于或者等于奶农最大产量的整数数量的牛奶。</p>
+    <p>给出梅丽乳业每天对牛奶的需求量，还有每位奶农提供的牛奶单价和产量。计算采购足够数量的牛奶所需的最小花费。</p>
+    <p>注：每天所有奶农的总产量大于梅丽乳业的需求量。</p>
+    <h2>输入格式 <small>milk.in</small></h2>
+    <p>第 1 行共二个数值: N, ( 0&lt;= N &lt;= 2,000,000 ) 是需要牛奶的总数；M, (0 &lt;= M &lt;= 5,000 ) 是提供牛奶的农民个数。
+    <p>第 2 到 M+1 行: 每行二个整数: Pi 和 Ai。
+    <p>Pi ( 0 &lt;= Pi &lt;= 1,000 ) 是农民 i 的牛奶的价格。
+    <p>Ai ( 0 &lt;= Ai &lt;= 2,000,000 ) 是农民 i 一天能卖给 Marry 的牛奶制造公司的牛奶数量。
+    <h2>输出格式 <small>milk.out</small></h2>
+    <p>单独的一行包含单独的一个整数，表示 Marry 的牛奶制造公司拿到所需的牛奶所要的最小费用</p>
+    <h2>输入样例</h2>
+    <pre>100 5
+5 20
+9 40
+3 10
+8 80
+6 30</pre>
+    <h2>输出样例</h2>
+    <pre>630</pre>
+</div>
+</body>
+</html>

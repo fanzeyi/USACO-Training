@@ -90,6 +90,14 @@ h1, h2, h3, h4, h5 {
     text-indent: 2em; 
 }
 
+.content li ul {
+    margin-left: 2em; 
+}
+
+.content p + pre {
+    margin: 10px 0; 
+}
+
 .sect-list ul {
     list-style: square inside; 
 }

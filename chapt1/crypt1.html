@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect3.html">第三节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/greedy.html">贪心算法</a></li>
+                            <li><span class="sn">milk</span><a href="/chapt1/milk.html">混合牛奶</a></li>
+                            <li><span class="sn">barn1</span><a href="/chapt1/barn1.html">修理牛棚</a></li>
+                            <li><a href="/chapt1/craft.html">取胜策略</a></li>
+                            <li><span class="sn">calfflac</span><a href="/chapt1/calfflac.html">牛与电脑</a></li>
+                            <li><span class="sn">crypt1</span><a href="/chapt1/crypt1.html">牛式</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <h1>牛式</h1>
+    <h2>题目描述</h2>
+    <p>下面是一个乘法竖式，如果用我们给定的那n个数字来取代*，可以使式子成立的话，我们就叫这个式子牛式。</p>
+<pre>
+      * * *
+   x    * *
+    -------
+      * * *         <-- partial product 1
+    * * *           <-- partial product 2
+    -------
+    * * * *
+</pre>
+    <p>数字只能取代*，当然第一位不能为0,况且给定的数字里不包括0。</p>
+    <p>注意一下在美国的学校中教的“部分乘积”，第一部分乘积是第二个数的个位和第一个数的积，第二部分乘积是第二个数的十位和第一个数的乘积.</p>
+    <p>写一个程序找出所有的牛式。</p>
+    <h2>输入格式 <small>crypt1.in</small></h2>
+    <p>Line 1: 数字的个数 n 。</p>
+    <p>Line 2: N 个用空格分开的数字（每个数字都属于{1,2,3,4,5,6,7,8,9}）。</p>
+    <h2>输出格式 <small>crypt1.out</small></h2>
+    <p>共一行，一个数字。表示牛式的总数。</p>
+    <h2>输入样例</h2>
+    <pre>5
+2 3 4 6 8</pre>
+    <h2>输出样例</h2>
+    <pre>1</pre>
+    <h2>样例分析</h2>
+<pre>
+      2 2 2
+    x   2 2
+     ------
+      4 4 4
+    4 4 4
+  ---------
+    4 8 8 4
+</pre>
+    <p>注意：结果只能为 4 位</p>
+</div>
+</body>
+</html>
