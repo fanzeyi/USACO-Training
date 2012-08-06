@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect4.html">第四节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/rec.html">搜索的技巧</a></li>
+                            <li><span class="sn">packrec</span><a href="/chapt1/packrec.html">铺放矩形块</a></li>
+                            <li><span class="sn">clocks</span><a href="/chapt1/clocks.html">时钟</a></li>
+                            <li><span class="sn">ariprog</span><a href="/chapt1/ariprog.html">等差数列</a></li>
+                            <li><span class="sn">milk3</span><a href="/chapt1/milk3.html">母亲的牛奶</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content typo">
+    <h1>时钟</h1>
+    <h2>题目描述</h2>
+    <p>考虑将如此安排在一个 3 x 3 行列中的九个时钟:</p>
+    <pre>|-------|    |-------|    |-------|    
+|       |    |       |    |   |   |    
+|---O   |    |---O   |    |   O   |          
+|       |    |       |    |       |           
+|-------|    |-------|    |-------|    
+    A            B            C
+
+|-------|    |-------|    |-------|
+|       |    |       |    |       |
+|   O   |    |   O   |    |   O   |
+|   |   |    |   |   |    |   |   |
+|-------|    |-------|    |-------|
+    D            E            F
+
+|-------|    |-------|    |-------|
+|       |    |       |    |       |
+|   O   |    |   O---|    |   O   |
+|   |   |    |       |    |   |   |
+|-------|    |-------|    |-------|
+    G            H            I</pre>
+    <p>目标要找一个最小的移动顺序将所有的指针指向12点。下面原表格列出了9种不同的旋转指针的方法，每一种方法都叫一次移动。选择1到9号移动方法，将会使在表格中对应的时钟的指针顺时针旋转90度。</p>
+    <table>
+        <thead>
+            <tr>
+                <th>移动方法</th>
+                <th>受影响的时钟</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>ABDE</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ABC</td></tr>
+            <tr>
+                <td>3</td>
+                <td>BCEF</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ADG</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>BDEFH</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>CFI</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>DEGH</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>GHI</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>EFHI</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>举例</h2>
+<pre>9 9 12          9 12 12       9 12 12        12 12 12         12 12 12
+6 6 6   5 ->    9  9  9   8-> 9  9  9   4 -> 12  9  9   9 ->  12 12 12
+6 3 6           6  6  6       9  9  9        12  9  9         12 12 12
+
+[但这可能不是正确的方法，请看下面]</pre>
+    <h2>输入格式 <small>clocks.in</small></h2>
+    <p>第1-3行: 三个空格分开的数字，每个数字表示一个时钟的初始时间，3,6,9,12。数字的含意和上面第一个例子一样。</p>
+    <h2>输出格式 <small>clocks.out</small></h2>
+    <p>单独的一行包括一个用空格分开的将所有指针指向12:00的最短移动顺序的列表。</p>
+    <p>如果有多种方案，输出那种使其连接起来数字最小的方案。(举例来说5 2 4 6 &lt; 9 3 1 1)。</p>
+    <h2>输入样例</h2>
+    <pre>9 9 12
+6 6 6
+6 3 6</pre>
+    <h2>输出样例</h2>
+    <pre>4 5 8 9</pre>
+</div>
+</body>
+</html>

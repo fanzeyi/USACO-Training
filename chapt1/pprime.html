@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect5.html">第五节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/binar.html">二进制算法</a></li>
+                            <li><span class="sn">numtri</span><a href="/chapt1/numtri.html">数字金字塔</a></li>
+                            <li><span class="sn">pprime</span><a href="/chapt1/pprime.html">回文质数</a></li>
+                            <li><span class="sn">sprime</span><a href="/chapt1/sprime.html">特殊的质数肋骨</a></li>
+                            <li><span class="sn">checker</span><a href="/chapt1/checker.html">跳棋的挑战</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content typo">
+    <h1>回文质数</h1>
+    <h2>题目描述</h2>
+    <p>因为 151 既是一个质数又是一个回文数(从左到右和从右到左是看一样的)，所以 151 是回文质数。</p>
+    <p>写一个程序来找出范围 [a,b](5 &lt;= a &lt; b &lt;= 100,000,000)(一亿)间的所有回文质数;</p>
+    <h2>输入格式 <small>pprime.in</small></h2>
+    <p>第 1 行: 二个整数 a 和 b .</p>
+    <h2>输出格式 <small>pprime.out</small></h2>
+    <p>输出一个回文质数的列表，一行一个。</p>
+    <h2>输入样例</h2>
+    <pre>5 500</pre>
+    <h2>输出样例</h2>
+    <pre>5
+7
+11
+101
+131
+151
+181
+191
+313
+353
+373
+383</pre>
+    <h2>提示</h2>
+    <p>提示 1: 找出所有的回文数再判断它们是不是质数（素数）.</p>
+    <p>提示 2: 要产生正确的回文数，你可能需要几个像下面这样的循环。</p>
+    <p>产生长度为5的回文数:</p>
+    <pre>
+for (d1 = 1; d1 <= 9; d1+=2) {	// 只有奇数才会是素数
+    for (d2 = 0; d2 <= 9; d2++) {
+        for (d3 = 0; d3 <= 9; d3++) {
+          palindrome = 10000*d1 + 1000*d2 +100*d3 + 10*d2 + d1;//(处理回文数...)
+        }
+    }
+}
+</pre>
+</div>
+</body>
+</html>

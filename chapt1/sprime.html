@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect5.html">第五节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/binar.html">二进制算法</a></li>
+                            <li><span class="sn">numtri</span><a href="/chapt1/numtri.html">数字金字塔</a></li>
+                            <li><span class="sn">pprime</span><a href="/chapt1/pprime.html">回文质数</a></li>
+                            <li><span class="sn">sprime</span><a href="/chapt1/sprime.html">特殊的质数肋骨</a></li>
+                            <li><span class="sn">checker</span><a href="/chapt1/checker.html">跳棋的挑战</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content typo">
+    <h1>特殊的质数肋骨</h1>
+    <h2>题目描述</h2>
+    <p>农民约翰的母牛总是产生最好的肋骨。 你能通过农民约翰和美国农业部标记在每根肋骨上的数字认出它们。 农民约翰确定他卖给买方的是真正的质数肋骨,是因为从右边开始切下肋骨,每次还剩下的肋骨上的数字都组成一个质数,举例来说:</p>
+    <p>7 3 3 1</p>
+    <p>全部肋骨上的数字 7331是质数;三根肋骨 733是质数;二根肋骨 73 是质数;当然,最后一根肋骨 7 也是质数。 7331 被叫做长度 4 的特殊质数。</p>
+    <p>写一个程序对给定的肋骨的数目 N (1 &lt;= N &lt;= 8),求出所有的特殊质数。 数字1不被看作一个质数。</p>
+    <h2>输入格式 <small>sprime.in</small></h2>
+    <p>单独的一行包含N。</p>
+    <h2>输出格式 <small>sprime.out</small></h2>
+    <p>按顺序输出长度为 N 的特殊质数,每行一个。</p>
+    <h2>输入样例</h2>
+    <pre>4</pre>
+    <h2>输出样例</h2>
+    <pre>
+2333
+2339
+2393
+2399
+2939
+3119
+3137
+3733
+3739
+3793
+3797
+5939
+7193
+7331
+7333
+7393
+</pre>
+</div>
+</body>
+</html>

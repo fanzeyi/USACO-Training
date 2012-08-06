@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect4.html">第四节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/rec.html">搜索的技巧</a></li>
+                            <li><span class="sn">packrec</span><a href="/chapt1/packrec.html">铺放矩形块</a></li>
+                            <li><span class="sn">clocks</span><a href="/chapt1/clocks.html">时钟</a></li>
+                            <li><span class="sn">ariprog</span><a href="/chapt1/ariprog.html">等差数列</a></li>
+                            <li><span class="sn">milk3</span><a href="/chapt1/milk3.html">母亲的牛奶</a></li>
+                        </ul>
+                    </li>
+                    <li><h3><a href="/chapt1/sect5.html">第五节</a></h3></li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content typo">
+    <h1>等差数列</h1>
+    <h2>题目描述</h2>
+    <p>一个等差数列是一个能表示成a, a+b, a+2b,..., a+nb (n=0,1,2,3,...)的数列。</p>
+    <p>在这个问题中a是一个非负的整数，b是正整数。写一个程序来找出在双平方数集合(双平方数集合是所有能表示成p的平方 + q的平方的数的集合)S中长度为n的等差数列。</p>
+    <h2>输入格式 <small>ariprog.in</small></h2>
+    <p>第一行: N(3 &lt;= N &lt;= 25),要找的等差数列的长度。</p>
+    <p>第二行: M(1 &lt;= M &lt;= 250),搜索双平方数的上界0 &lt;= p,q &lt;= M。</p>
+    <h2>输出格式 <small>ariprog.out</small></h2>
+    <p>如果没有找到数列,输出`NONE'。</p>
+    <p>如果找到了，输出一行或多行, 每行由二个整数组成:a,b。</p>
+    <p>这些行应该先按b排序再按a排序。</p>
+    <p>所求的等差数列将不会多于10,000个。</p>
+    <h2>输入样例</h2>
+    <pre>5
+7</pre>
+    <h2>输出样例</h2>
+    <pre>1 4
+37 4
+2 8
+29 8
+1 12
+5 12
+13 12
+17 12
+5 20
+2 24</pre>
+</div>
+</body>
+</html>

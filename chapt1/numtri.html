@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>USACO Training 中文翻译 - Online Judge</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+</head>
+<body>
+<div class="sidebar">
+    <div class="sidebar-wrap">
+        <ul class="chapt-list">
+            <li><h2><span class="chapt-num">00</span><a href="/">首页</a></h2></li>
+            <li>
+                <h2><span class="chapt-num">01</span><a href="/chapt1/">入门</a></h2>
+                <ul class="sect-list">
+                    <li><h3><a href="/chapt1/">简介</a></h3></li>
+                    <li><h3><a href="/chapt1/sect1.html">第一节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect2.html">第二节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect3.html">第三节</a></h3></li>
+                    <li><h3><a href="/chapt1/sect4.html">第四节</a></h3></li>
+                    <li>
+                        <h3><a href="/chapt1/sect5.html">第五节</a></h3>
+                        <ul>
+                            <li><a href="/chapt1/binar.html">二进制算法</a></li>
+                            <li><span class="sn">numtri</span><a href="/chapt1/numtri.html">数字金字塔</a></li>
+                            <li><span class="sn">pprime</span><a href="/chapt1/pprime.html">回文质数</a></li>
+                            <li><span class="sn">sprime</span><a href="/chapt1/sprime.html">特殊的质数肋骨</a></li>
+                            <li><span class="sn">checker</span><a href="/chapt1/checker.html">跳棋的挑战</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><h2><span class="chapt-num">02</span><a href="/chapt2/">更大的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">03</span><a href="/chapt3/">更微妙的技术</a></h2></li>
+            <li><h2><span class="chapt-num">04</span><a href="/chapt4/">高级算法与困难习题</a></h2></li>
+            <li><h2><span class="chapt-num">05</span><a href="/chapt5/">高峻的挑战</a></h2></li>
+            <li><h2><span class="chapt-num">06</span><a href="/chapt6/">大赛的实践</a></h2></li>
+        </ul>
+    </div>
+</div>
+<div class="content typo">
+    <h1>数字金字塔</h1>
+    <h2>题目描述</h2>
+    <p>观察下面的数字金字塔。</p>
+    <p>写一个程序来查找从最高点到底部任意处结束的路径，使路径经过数字的和最大。每一步可以走到左下方的点也可以到达右下方的点。</p>
+    <pre>
+          7
+        3   8
+      8   1   0
+    2   7   4   4
+  4   5   2   6   5
+</pre>
+    <p>在上面的样例中,从7 到 3 到 8 到 7 到 5 的路径产生了最大</p>
+    <h2>输入格式 <small>numtri.in</small></h2>
+    <p>第一个行包含 R ( 1 &lt;= R &lt;= 1000) ,表示行的数目。</p>
+    <p>后面每行为这个数字金字塔特定行包含的整数。</p>
+    <p>所有的被供应的整数是非负的且不大于100。</p>
+    <h2>输出格式 <small>numtri.out</small></h2>
+    <p>单独的一行,包含那个可能得到的最大的和。</p>
+    <h2>输入样例</h2>
+    <pre>
+5
+7
+3 8
+8 1 0
+2 7 4 4
+4 5 2 6 5
+</pre>
+    <h2>输出样例</h2>
+    <pre>30</pre>
+</div>
+</body>
+</html>
