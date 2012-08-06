@@ -83,14 +83,17 @@ h1, h2, h3, h4, h5 {
 .content ul {
     list-style: square inside; 
     text-indent: 2em; 
+    margin: 0; 
 }
 
 .content ol {
     list-style: decimal inside; 
     text-indent: 2em; 
+    margin: 0; 
 }
 
 .content li ul {
+    list-style: square inside; 
     margin-left: 2em; 
 }
 
